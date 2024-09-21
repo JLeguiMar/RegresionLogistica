@@ -19,7 +19,7 @@ from sklearn.metrics import confusion_matrix, accuracy_score, classification_rep
 from google.colab import files
 uploaded = files.upload()
 
-# Cargar los datos desde un archivo CSV o similar
+# Cargar los datos desde un archivo CSV
 data = pd.read_csv('Prueba2.csv')
 
 # Ver las primeras filas y la información básica de los datos
@@ -49,7 +49,7 @@ y_pred = logistic_model.predict(X_test_scaled)
 # Calcular la matriz de confusión
 conf_matrix = confusion_matrix(y_test, y_pred)
 
-# Mostrar la matriz de confusión en un gráfico de calor
+# Mostrar la matriz de confusión 
 plt.figure(figsize=(8,6))
 sns.heatmap(conf_matrix, annot=True, fmt='d', cmap='Blues', cbar=False)
 plt.xlabel('Predicted')
